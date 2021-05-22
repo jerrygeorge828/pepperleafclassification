@@ -76,10 +76,10 @@ def model_predict(img_path, model):
 # In[11]:
 
 
-@app.route('/', methods=['GET'])
-def index():
+#@app.route('/', methods=['GET'])
+#def index():
     # Main page
-    return render_template('index.html')
+    #return render_template('index.html')
 
 
 # In[12]:
