@@ -27,7 +27,7 @@ from tensorflow.keras.preprocessing import image
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
-#from gevent.pywsgi import WSGIServer
+from gevent.pywsgi import WSGIServer
 
 # Define a flask app
 app = Flask(__name__)
@@ -43,7 +43,7 @@ model = load_model(MODEL_PATH)
 
 def model_predict(img_path, model):
     print(img_path)
-    img = image.load_img(img_path, target_size=(224, 224))
+    img = image.load_img(img_path, target_size=(128, 128))
 
     # Preprocessing the image
     x = image.img_to_array(img)
